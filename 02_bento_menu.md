@@ -80,6 +80,22 @@
     }
     ```
 
-    
+  - `null`값으로 처리하지 않은 경우
+
+    ![image-20210907004306626](02_bento_menu.assets/image-20210907004306626.png)
+
+    ![image-20210907004253248](02_bento_menu.assets/image-20210907004253248.png)
+
+  - `null`값으로 처리한 경우
+
+    ![image-20210907003950739](02_bento_menu.assets/image-20210907003950739.png)
+
+    ![image-20210907004017228](02_bento_menu.assets/image-20210907004017228.png)
 
 ### 더 생각해볼 거리
+
+- axios, JS
+- Promise 중요! axios(비동기)가 Promise객체를 반환  / async awiat도 Promise객체를 반환
+  - 비동기
+- closer? closure?
+- animation

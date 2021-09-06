@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <style>
     .box {
       width: 20px;
@@ -22,15 +23,39 @@
       flex-direction: column;
       justify-content: space-between;
       cursor: pointer;
-      position: relative;
-      margin: 10px 20px;
     }
     .menu {
-      overflow: hidden;
-      position: sticky;
+      overflow: scroll;
+      overflow-x: hidden;
+      margin-top: 10px;
       width: 250px;
       height: 0;
       background-color: cornflowerblue;
+      opacity: 1;
+      animation: fadeIn 3000ms;
+      transition: opacity 3s ease;
+    }
+    .menu-item {
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      background-color: darkblue;
+    }
+    .menu-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .menu-row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -51,10 +76,50 @@
       <div class="box"></div>
       <div class="box"></div>
     </div>
-    <div id="menu" class="menu">
+  </div>
+  <div id="menu" class="menu fade-in">
+    <div class="menu-col">
+      <div class="menu-row">
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+      </div>
+      <div class="menu-row">
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+      </div>
+      <div class="menu-row">
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+      </div>
+      <div class="menu-row">
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+      </div>
+      <div class="menu-row">
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+      </div>
+      <div class="menu-row">
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+      </div>
+      <div class="menu-row">
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+        <div class="menu-item"></div>
+      </div>
     </div>
   </div>
+
+
 </body>
+
 <script>
   const divLst = document.getElementsByTagName('div')
   console.log(divLst)
@@ -69,7 +134,9 @@
       menu.style.height = '300px';
     }
   })
-
-
+  // menu안에 들어갈 item을 만들어서 menu에 추가해주기
+  // for (let i = 0; i < 7; i++) {
+  //   const item = document.createElement('div')
+  // }
 </script>
 </html>
