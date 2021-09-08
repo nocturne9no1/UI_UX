@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breadcrumb</title>
+  <style>
+    .breadcrumb {
+      /* 리스트의 똥글뱅이를 없애줌 */
+      list-style-type: none;
+      display: flex;
+    }
+    .breadcrumb li+li::before {
+      padding: 8px;
+      color: black;
+      content: "/";
+    }
+    .breadcrumb > li {
+      color: blue;
+      cursor: pointer;
+    }
+    .breadcrumb > li:last-child {
+      color: gray;
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+  <ul class="breadcrumb">
+    <li>의류</li>
+    <li>상의</li>
+    <li>아우터</li>
+    <li>MA - 1</li>
+  </ul>
+</body>
+</html>

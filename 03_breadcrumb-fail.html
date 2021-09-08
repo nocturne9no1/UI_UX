@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breadcrumb</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+  <h1>Breadcrumb</h1>
+  <div id="breadcrumb"></div>
+  <ul>
+    <li>
+      <a href="">A</a>
+      <ul>
+        <li><a href="">A-1</a></li>
+        <li><a href="">A-2</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="">B</a>
+      <ul>
+        <li><a href="">B-1</a></li>
+        <li><a href="">B-2</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+<script>
+  const nodes = document.querySelectorAll('a');
+  const stack = [];
+  const breadcrumb = document.getElementById("breadcrumb");
+  for ( let node of nodes ) {
+    node.addEventListener("click", event => {
+      event.preventDefault();
+      stack.push('//' + node.innerText)
+      console.log(stack)
+      breadcrumb.innerText = stack
+    })
+  };
+  // nodes.forEach(node => console.log(node.innerText))
+</script>
+</html>
