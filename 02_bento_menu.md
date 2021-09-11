@@ -4,7 +4,7 @@
 
 - 벤토 메뉴(Bento Menu)란??
   - 통칭 벤토(도시락) 메뉴 또는 벤토 박스라고 불리는 이것은 **그리드 목록으로 나열되는 메뉴**를 의미합니다.
-  - <img src="02_bento_menu.assets/image-20210906215709264.png" alt="image-20210906215709264" style="zoom:50%;" />
+  - <img src="02_bento_menu.assets/image-20210906215709264.png" alt="image-20210906215709264" style="zoom:50%;" />![image-20210911205014452](02_bento_menu.assets/image-20210911205014452.png)
 
 ## 본론
 
