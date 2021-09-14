@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button</title>
+</head>
+<style>
+  .div-btn {
+    background-color: rgb(119, 132, 143);
+    width: 200px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 개체의 넓이와 높이를 반대로 50%이동? */
+    transform: translate(-50%, -50%);
+  }
+</style>
+<body>
+  <div id="div-btn" class="div-btn">div button</div>
+
+</body>
+<script>
+  const btn = document.getElementById('div-btn');
+  const link = "https://www.naver.com"
+  btn.addEventListener('click', function() {
+    // 현재 창에서
+    // location.href = link
+    // 새창으로 열기
+    // window.open(link)
+    // window.open(link,'window_name','width=430,height=500,location=no,status=no,scrollbars=no');
+    window.open(link,'window_name','fullscreen=yes');
+  })
+</script>
+</html>
