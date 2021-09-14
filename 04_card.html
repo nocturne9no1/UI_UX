@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+  <style>
+    .card-body {
+      background-color: #000000;
+      width: 320px;
+      height: 210px;
+      border-radius: 3px;
+      position: relative;
+    }
+    .card-img {
+      width: 320px;
+    }
+
+    .game-title {
+      font-size: 24px;
+      margin: 0 30px;
+    }
+
+    span {
+      margin: 0;
+      color: white;
+    }
+
+    .flatfrom-icons {
+      margin: 0 10px 0 20px;
+    }
+    .flatfrom-icons>i {
+      color: white;
+    }
+
+    .small-content {
+      font-size: 13px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      bottom: 65px;
+
+    }
+    .tag {
+      margin: 0 5px;
+      padding: 2px 5px;
+      color: white;
+      font-size: 12px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 4px;
+
+      
+      height: 0;
+      opacity: 0;
+      overflow-y: hidden;
+      transition: height 0.5s ease, opacity 0.5s ease;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/af806c52f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="card-body" id="card-body">
+    <img class="card-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/105600/header.jpg?t=1590092560" alt="">
+    <div class="tags" id="tags">
+      <div class="tag">Survival</div>
+      <div class="tag">Sandbox</div>
+      <div class="tag">Action</div>
+    </div>
+    <div class="card-content">
+      <span class="game-title">Terraria</span>
+      <div class="small-content">
+        <span>￦ 10,500</span>
+        <div class="flatfrom-icons">
+          <i class="fab fa-windows"></i>
+          <i class="fab fa-apple"></i>
+          <i class="fab fa-steam"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const cardBody = document.getElementById("card-body");
+  const tagList = document.getElementsByClassName("tag");
+  const tags = document.getElementById("tags");
+
+  for (let i=0; i<tagList.length; i++ ) {
+    console.log(tagList[i].style)
+  }
+  cardBody.addEventListener("mouseenter", event => {
+    for (let i=0; i<tagList.length; i++ ) {
+      tagList[i].style.height = tagList[i].scrollHeight + 'px';
+      tagList[i].style.opacity = 1;
+      tagList[i].style.transitionDelay = i * 0.08 + 's';
+    }
+  })
+  cardBody.addEventListener("mouseleave", event => {
+    for (let i=0; i<tagList.length; i++ ) {
+      tagList[i].style.height = null;
+      tagList[i].style.opacity = 0;
+      tagList[i].style.transitionDelay = i * 0.08 + 's';
+    }
+  })
+</script>
+</html>
