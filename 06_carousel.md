@@ -54,6 +54,16 @@
 
 - To be Continue...
 
+- 어제에 이어서 빠르게 두 가지 시도를 해볼건데 
+
+  1. ul태그와 li태그를 활용한 방식
+
+     <img src="06_carousel.assets/image-20210916230613315.png" alt="image-20210916230613315" style="zoom:67%;" />
+
+  2. input radio로
+
+     
+
 ### 완성 코드
 
 ```html
