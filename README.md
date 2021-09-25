@@ -77,7 +77,7 @@
 
 [25. 서치 필드 (Search Field)](https://velog.io/@oneook/프론트엔드-개발자라면-반드시-알아두어야-할-32가지의-UI-요소-번역#25-서치-필드-search-field)
 
-[26. 사이드바 (Sidebar)](https://velog.io/@oneook/프론트엔드-개발자라면-반드시-알아두어야-할-32가지의-UI-요소-번역#26-사이드바-sidebar)
+26. 사이드바 (Sidebar)
 
 27. 슬라이더 컨트롤 (Slider Controls)
 
